@@ -1,15 +1,15 @@
-# 🧠 Employee Attrition Analysis & Prediction
+# Employee Attrition Analysis & Prediction
 
 This project explores the primary causes of employee attrition using IBM's HR Analytics Employee Attrition dataset. Leveraging Python's data analysis libraries—particularly `pandas` and `scikit-learn`—the goal is to understand the underlying factors contributing to attrition and build a predictive model to identify at-risk employees.
 
-## 📊 Project Objectives
+## Project Objectives
 
 - Analyze and visualize key features that influence employee attrition.
 - Preprocess and clean the IBM HR dataset using `pandas`.
 - Develop and evaluate a machine learning model to predict attrition risk.
 - Provide actionable insights to help businesses improve employee retention.
 
-## 🔍 Dataset
+## Dataset
 
 The dataset used is the **IBM HR Analytics Employee Attrition & Performance** dataset, available on [Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset). It contains 35+ features related to:
 
@@ -18,7 +18,7 @@ The dataset used is the **IBM HR Analytics Employee Attrition & Performance** da
 - Compensation and satisfaction
 - Performance and work-life balance
 
-## 🛠️ Tools & Libraries
+##  Tools & Libraries
 
 - Python 3.x
 - `pandas` for data manipulation
@@ -27,7 +27,7 @@ The dataset used is the **IBM HR Analytics Employee Attrition & Performance** da
 - `numpy` for numerical operations
 - `xgboost` (optional) for advanced model tuning
 
-## 📈 Workflow
+## Workflow
 
 1. **Data Loading & Cleaning**
    - Handle missing values and data types
@@ -52,12 +52,9 @@ The dataset used is the **IBM HR Analytics Employee Attrition & Performance** da
 
 ## 🔮 Key Findings
 
-> _Example (update with actual results):_  
-> - Job satisfaction and environment satisfaction were strong predictors of attrition.  
-> - Employees with less than 3 years at the company and frequent job changes were more likely to leave.  
-> - Work-life balance and overtime status had high influence on attrition outcomes.
+> _
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Installation
 
