@@ -1,64 +1,121 @@
-# Employee Attrition Analysis & Prediction
+# Predicting Employee Attrition  
+### A Data-Driven Approach to Employee Retention  
+**By: Enkel Mezini**
 
-This project explores the primary causes of employee attrition using IBM's HR Analytics Employee Attrition dataset. Leveraging Python's data analysis libraries—particularly `pandas` and `scikit-learn`—the goal is to understand the underlying factors contributing to attrition and build a predictive model to identify at-risk employees.
+---
 
-## Project Objectives
+## 📌 Overview
 
-- Analyze and visualize key features that influence employee attrition.
-- Preprocess and clean the IBM HR dataset using `pandas`.
-- Develop and evaluate a machine learning model to predict attrition risk.
-- Provide actionable insights to help businesses improve employee retention.
+Employee attrition is a costly issue — both financially and strategically. According to Gallup, **52% of voluntarily exiting employees say their manager or organization could have prevented them from leaving**. This project uses a machine learning approach to **predict employee attrition** and enable HR teams to take proactive retention measures.
 
-## Dataset
+---
 
-The dataset used is the **IBM HR Analytics Employee Attrition & Performance** dataset, available on [Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset). It contains 35+ features related to:
+## 🎯 Objective
 
-- Personal demographics
-- Job roles and levels
-- Compensation and satisfaction
-- Performance and work-life balance
+To explore how predictive models built around key themes — **Engagement & Culture**, **Wellbeing & Work-Life Balance**, and **Pay & Benefits** — can provide actionable insights to reduce turnover and its associated costs.
 
-##  Tools & Libraries
+---
 
-- Python 3.x
-- `pandas` for data manipulation
-- `matplotlib` and `seaborn` for data visualization
-- `scikit-learn` for machine learning
-- `numpy` for numerical operations
-- `xgboost` (optional) for advanced model tuning
+## 🧠 Hypotheses
 
-## Workflow
+- Employees with **low job satisfaction** are more likely to leave.
+- Employees with **high monthly income** are less likely to leave.
+- Employees who **work overtime** are more likely to leave.
 
-1. **Data Loading & Cleaning**
-   - Handle missing values and data types
-   - Encode categorical variables
+---
 
-2. **Exploratory Data Analysis (EDA)**
-   - Analyze correlations between features and attrition
-   - Visualize high-impact factors using bar plots, heatmaps, and histograms
+## 📊 Dataset Overview
 
-3. **Feature Engineering**
-   - Create meaningful derived features
-   - Normalize and scale data
+The dataset includes a mix of:
+- **Demographic data** (Age, Gender, MaritalStatus, etc.)
+- **Job-related features** (Department, JobRole, OverTime, MonthlyIncome, etc.)
+- **Performance and satisfaction scores**
+- **Target Variable**: `Attrition` (Yes/No)
 
-4. **Model Development**
-   - Train/test split
-   - Fit classification models (e.g., Logistic Regression, Random Forest, XGBoost)
-   - Evaluate using accuracy, precision, recall, and F1 score
+---
 
-5. **Insights & Recommendations**
-   - Highlight top drivers of attrition
-   - Suggest organizational strategies for retention
+## 🧮 Machine Learning Models Used
 
-## 🔮 Key Findings
+| Model | Theme | Accuracy |
+|-------|-------|----------|
+| **Decision Tree** | Engagement & Culture | 78.91% |
+| **SVM (Support Vector Machine)** | Wellbeing & Work-Life Balance | 74.83% |
+| **Decision Tree** | Pay and Benefits | 65.99% |
+| **Stacking Ensemble (Final Model)** | All Themes Combined | **85%** |
 
-> _
+---
 
-## Getting Started
+## 🧩 Final Model: Stacking Classifier
 
-### Installation
+Combines:
+- Logistic Regression
+- Decision Tree
+- Support Vector Machine (SVM)
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/employee-attrition-analysis.git
-   cd employee-attrition-analysis
+**Performance:**
+- **Accuracy**: 85%
+- **AUC**: 0.80 (Good at distinguishing between stayers and leavers)
+- **Lift**: 6x more effective in identifying true leavers early
+
+---
+
+## 📈 Key Variables by Theme
+
+### Engagement & Culture
+- JobSatisfaction
+- JobRole
+- Department
+- JobInvolvement
+- EnvironmentSatisfaction
+- RelationshipSatisfaction
+
+### Wellbeing & Work-Life Balance
+- Age
+- OverTime
+- DistanceFromHome
+- WorkLifeBalance
+- MaritalStatus
+- YearsSinceLastPromotion
+
+### Pay and Benefits
+- MonthlyIncome
+- PercentSalaryHike
+- StockOptionLevel
+- JobLevel
+- Education
+
+---
+
+## 🔍 Visual Insights
+
+- **Confusion Matrix**: Indicates strong performance across categories
+- **ROC Curve**: Shows high separability
+- **Lift Curve**: 6x higher chance of catching potential attrition in early deciles
+
+---
+
+## 💼 Business Impact
+
+- **Reduced Innovation Velocity**: Loss of skilled employees in R&D/AI slows down growth.
+- **High Cost of Replacement**: ~$100K per lost employee in rehiring and training.
+- **Loss of Client Trust**: Attrition in client-facing roles impacts relationships and delivery.
+
+---
+
+## ✅ Recommendations
+
+1. **Predictive Retention Dashboards**
+   - Integrate model into HR systems
+   - Automate monthly attrition risk alerts
+
+2. **Tailored Interventions**
+   - Engagement risks: manager coaching, job rotation
+   - Pay-related risks: off-cycle salary reviews or retention bonuses
+
+3. **Pilot and Iterate**
+   - Start with one region or department
+   - Monitor attrition reduction and engagement scores
+
+---
+
+
